@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<div src="./dist/app.js" id="hello">
+    <div id="root"></div>
+</div>
+<script type="module">
+    import {upgradeElement} from 'https://unpkg.com/@ampproject/worker-dom@0.2.8/dist/unminified.index.mjs';
+    upgradeElement(document.getElementById('hello'), 'https://unpkg.com/@ampproject/worker-dom@0.2.8/dist/unminified.worker.mjs');
+</script>
