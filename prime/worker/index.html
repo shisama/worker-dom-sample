@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Worker prime</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <h1>10万までの素数</h1>
+        <div id="wait">Waiting...</div>
+        <ul id="prime_list">
+        </ul>
+        <script>
+        let waiting = true;
+        const worker = new Worker("./prime.js");
+        worker.onmessage = (e) => {
+            if (waiting) {
+                wait.remove();
+                waiting = false;
+            }
+            const prime = e.data.prime;
+            const el = document.createElement('li');
+            el.textContent = prime;
+            prime_list.appendChild(el);
+        }
+        worker.postMessage({n: 100000});
+        </script>
+    </body>
+</html>

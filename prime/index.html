@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<h1>10万までの素数</h1>
+<div src="prime.js" id="prime">
+    <div id="wait">Waiting...</div>
+    <ul id="prime_list">
+    </ul>
+</div>
+<script type="module">
+    import {upgradeElement} from 'https://unpkg.com/@ampproject/worker-dom@0.2.8/dist/unminified.index.mjs';
+    upgradeElement(document.getElementById('prime'), 'https://unpkg.com/@ampproject/worker-dom@0.2.8/dist/unminified.worker.mjs');
+</script>
