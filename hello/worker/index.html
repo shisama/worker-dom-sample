@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div src="hello.js" id="hello">
+    <div id="waiting">Waiting...</div>
+</div>
+<script>
+    // workerで実行するファイルを指定しworker生成
+    const worker = new Worker("./worker.js");
+    // worker側から値を受け取る
+    worker.onmessage = (e) => {
+      document.body.innerHTML = `Hello, ${e.data.name}!`;
+    }
+</script>
