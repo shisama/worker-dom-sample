@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shisama/worker-dom-sandbox.git"
+    "url": "git+https://github.com/shisama/worker-dom-sample.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shisama/worker-dom-sandbox/issues"
+    "url": "https://github.com/shisama/worker-dom-sample/issues"
   },
-  "homepage": "https://github.com/shisama/worker-dom-sandbox#readme"
+  "homepage": "https://github.com/shisama/worker-dom-sample#readme"
 }
