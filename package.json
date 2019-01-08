@@ -1,8 +1,8 @@
 {
-  "name": "worker-dom-sandbox",
+  "name": "worker-dom-sample",
   "version": "1.0.0",
   "description": "",
-  "main": "primes.js",
+  "main": "hello/hello.js",
   "dependencies": {
     "http-server": "^0.11.1"
   },
